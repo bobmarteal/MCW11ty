@@ -1,0 +1,10 @@
+/* 
+    Name: _main
+    Descr: Style the main content well of the website
+*/
+
+main{
+    max-width: var(--main-max-width);
+    margin: 0 auto;
+    padding: 2rem 1rem 3rem;
+}

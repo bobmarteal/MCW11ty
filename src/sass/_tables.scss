@@ -1,0 +1,25 @@
+/* 
+    Name: _tables
+    Descr: Styles the main page tables
+*/
+
+.data{
+    border-collapse: collapse;
+    width: 100%;
+    th{
+         border: 1px solid var(--light-gray);
+         padding: .5rem 1rem;
+    }
+    td{
+        padding: .5rem;
+        border: 1px solid var(--light-gray);
+        &:first-of-type{
+            padding-right: 1rem;
+        }
+        &:last-of-type{
+            //padding-left: 1rem;
+            width: 20%;
+            text-align: center;
+        }
+    }
+}

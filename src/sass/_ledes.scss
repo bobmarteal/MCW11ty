@@ -1,0 +1,56 @@
+/* 
+    Name: _ledes
+    Descr: styles for different lede sections
+*/
+
+
+// lede
+.lede{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 3em;        
+    @include sm{
+        padding: 0 2em;
+        font-size: 1.5rem;  
+        margin: 2rem 0;
+        &:before{
+            position: absolute;
+            top: 0;
+            width: calc(100% - (4em));
+            height: 2px;
+            background:var(--yellow);
+            content: '';
+        }
+    }
+    text-align: center;
+    font-weight: 100;
+    .icon--bicycle{
+        position: relative;
+        display: flex;
+        align-items: center;
+        @include sm{
+            &:before{
+                position: absolute;
+                display: block;
+                background: var(--yellow);
+                height: 2px;
+                width: 600px;
+                left: calc(50% - 300px);
+                content: '';
+            } 
+        }
+        
+        &:after{
+            position: absolute;
+            display: block;
+            text-align: center;
+            left: calc(50% - 40px);
+            background: #fff;
+            height: 40px;
+            width: 80px;
+            content: url(/images/littler-teal-bike.svg);
+        }            
+
+    }
+}

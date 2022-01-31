@@ -1,0 +1,23 @@
+/* 
+    Name: _bike
+    Descr: Styles all individual bike layout.
+*/
+
+.bikeIntroduction {
+	// border-bottom: 1px solid var(--light-gray);
+	padding-bottom: 2rem;
+	position: relative;
+	&::after {
+		position: absolute;
+		height: 1px;
+		width: 100%;
+		background: linear-gradient(90deg, var(--blue), var(--smoke), var(--blue));
+		bottom: 0;
+		left: 0;
+		content: "";
+	}
+	&__title {
+		font-weight: var(--extra-weight);
+		margin: 1.2em 0 0.5em 0;
+	}
+}

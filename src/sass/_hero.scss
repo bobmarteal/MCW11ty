@@ -1,0 +1,41 @@
+/* 
+    Name: _hero
+    Descr: Style for the hero image and header
+*/
+
+.hero{
+
+    @include lg{
+        width: 120%;
+        margin-left: -10%;
+    }
+    @include xs{
+        display: grid;
+        grid-template-rows: 1fr auto 1fr;
+    }
+    @include sm{
+        margin-bottom: 3rem;
+    }
+    img{
+        grid-row: 1 / -1;
+        grid-column: 1 / -1;
+    }
+    h1{
+        // grid-row: 3;
+        grid-column: 1 / -1;
+        font-size: 2rem;
+        line-height: 1;
+        @include sm{
+            color: var(--white);  
+            padding: 0 2rem; 
+            grid-row: 2 / -1;
+            font-size: 3rem;
+            @include textShadow();
+        }
+        span{
+            display: block;
+            font-size: 2rem;
+            font-weight: var(--medium-weight);
+        }
+    }
+}

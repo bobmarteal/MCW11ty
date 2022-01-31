@@ -1,0 +1,13 @@
+/* 
+    Name: _block
+    Descr: Style the inpage block sections
+*/
+
+.block{
+  margin-bottom: 2rem;
+  &__title{
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 2em;
+  }
+}

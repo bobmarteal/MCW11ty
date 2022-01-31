@@ -1,0 +1,26 @@
+/* 
+    Name: _footer
+    Descr: footer styles
+*/
+footer{
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+    border-top: 1px solid var(--light-gray);
+    background: var(--smoke);
+    color: var(--white);
+    ul{
+        display: flex;
+        list-style-type: none;
+        padding: 0 2rem 4rem;
+        font-size: .75rem;
+        justify-content: space-between;
+        li{
+            margin: 0 1rem;
+        }
+        @include md{
+            padding: 0 2rem 4rem;
+        }
+    }
+    a{
+        color: var(--white);
+    }
+}

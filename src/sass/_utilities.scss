@@ -1,0 +1,21 @@
+/* 
+    Name: _utilities
+    Descr: Styles for all the bits and bobs that go beyond each element
+*/
+
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+.centered{
+  margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.fortyP{
+    @include sm{
+        max-width: 40%;
+    }
+}

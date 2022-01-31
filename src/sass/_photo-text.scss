@@ -1,0 +1,15 @@
+/* 
+    Name: _photo-text
+    Descr: Styles the main photos next to text block for callouts on pages
+*/
+
+.pt{
+    @include lg{
+        width: 120%;
+        margin-left: -10%;
+        margin-bottom: 3rem;
+    }
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}

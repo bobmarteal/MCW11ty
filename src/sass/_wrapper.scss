@@ -1,0 +1,11 @@
+/* 
+    Name: _wrapper
+    Descr: Styles wrapper for contents
+*/
+.wrapper{
+    max-width: var(--wrapper-max-width);
+    margin: 0 auto;
+    background: var(--white);
+    border-radius: var(--border-radius);
+    margin-bottom: 3rem;
+}

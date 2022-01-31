@@ -1,0 +1,47 @@
+/* 
+    Name: _vars
+    Descr: All of the vars
+*/
+
+:root{
+    --wrapper-max-width: 1440px;
+    --main-max-width: 954px;
+
+    --border-radius: 4px;
+
+
+    //colors
+    --teal: #3A9595;
+    --yellow: #f3f644 ;
+    --blue: #59bbe4;
+    --green: #245e5e;
+
+    --smoke: #346f87;
+
+    --light-gray: #f8f8f8;
+    --white: #fff;
+    --black: #444;
+
+    //fonts
+    --serif: 'museo-slab', serif;
+    --sans: 'proxima-nova', sans-serif;
+
+    //font-sizes
+    --base-font-size: 28px;
+    --base-line-height: 1.4;
+
+    --main-nav-size: calc(1.25 * (var(--base-font-size)));
+
+    //font-weights
+    --light-weight: 300;
+    --medium-weight: 600;
+    --extra-weight: 900;
+
+    
+}
+
+$screen-xs-min: 425px;  // Tiny phones
+$screen-sm-min: 768px;  // Small tablets and large smartphones (landscape view)
+$screen-md-min: 960px;  // Small tablets (portrait view)
+$screen-lg-min: 1200px;  // Tablets and small desktops
+$screen-xl-min: 1440px; // Large tablets and desktops

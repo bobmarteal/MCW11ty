@@ -1,0 +1,21 @@
+/* 
+    Name: _mixins
+    Descr: All of the mixins
+*/
+
+// media queries
+@mixin xs { @media (min-width: #{$screen-xs-min}) {@content;} } // Tiny devices
+@mixin sm { @media (min-width: #{$screen-sm-min}) {@content;} } // Small devices
+@mixin md { @media (min-width: #{$screen-md-min}) {@content;} } // Medium devices
+@mixin lg { @media (min-width: #{$screen-lg-min}) {@content;} } // Large devices
+@mixin xl { @media (min-width: #{$screen-xl-min}) {@content;} } // Extra large devices
+
+//box shadow
+@mixin boxShadow(){
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+//text shadow
+@mixin textShadow(){
+  text-shadow: 0px 0px 8px rgb(0, 0, 0);
+}

@@ -1,0 +1,34 @@
+/* 
+    Name: _contact
+    Descr: Styles the contact block in the footer, and the contact form
+*/
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem;
+    div:first-of-type{
+        flex: 0 0 40%;
+    }
+    form{
+        flex: 0 0 50%;
+    }
+    input, textarea, button{
+        width: 100%;
+        border: 1px solid var(--blue);
+        border-radius: 4px;
+        font-size: .75rem;
+        padding: .25rem;
+    }
+    textarea{
+        height: 4rem;
+    }
+    button{
+        width: 40%;
+    }
+    @include md{
+        flex-direction: row;
+        padding: 2rem;
+    }
+}

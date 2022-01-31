@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/main.css">
+    {# <link rel="stylesheet" href="/css/animate.css"> #}
+   {#  <link rel="stylesheet" href="https://use.typekit.net/vfb8yty.css"> #}
+    {# <script src="/js/jquery-3.4.1.min.js"></script>
+    <script src="/js/jquery.waypoints.min.js"></script>
+    <script src="/js/magnific.js"></script>
+    <script src="/js/scripts.js"></script> #}
+    
+    {# {% seo %} #}
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-153281492-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-153281492-1');
+    </script>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="pageHeader">
+        <h1 class="siteTitle">{{title}}</h1>
+        {# {% include navigation.html %} #}
+        </header>
+        <main>
+            {{ content | safe }}
+        </main>
+        <footer>
+            <div class="contact">
+                <div>
+                <h2>
+                    Contact
+                </h2>
+                <p>
+                    A custom bicycle experience is very personal. Please reach out to me so we can start your journey towards your one true custom bicycle.
+                </p>  
+                </div>
+
+                <form name="contact" method="POST" data-netlify="true">
+                    <p>
+                        <label for="name">Your Name: <br /><input type="text" name="name" id="name" /></label>
+                    </p>
+                    <p>
+                        <label for="email">Your Email: <br /><input type="email" name="email" id="email" /></label>
+                    </p>
+                    <p>
+                        <label>Message: <br /><textarea name="message"></textarea></label>
+                    </p>
+                    <p>
+                        <button type="submit">Send</button>
+                    </p>
+                </form>
+            </div>
+            <ul>
+                <li>
+                    <a href="mailto:martealcycleworks@gmail.com">Email Marteal Cycle Works</a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/martealcycleworks/">Follow MCW on Instagram</a>
+                </li>
+                <li>
+                    <a href="tel:1-607-227-1657">1-607-227-1657</a>
+                </li>
+                <li>
+                    Website design by <a href="mailto: bobmarteal@gmail.com">Bob Marteal</a>
+                </li>
+            </ul>
+        </footer>
+    </div>
+</body>
+
+</html>

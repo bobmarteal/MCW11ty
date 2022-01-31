@@ -1,0 +1,37 @@
+/* 
+    Name: _images
+    Descr: Style all images
+    -pano
+    -inline
+    -shows
+*/
+
+img{
+    max-width: 100%;
+    border-radius: var(--border-radius);
+    @include boxShadow();
+    &.plain{
+        box-shadow: none;
+    }
+    &.right{
+        margin-left: 1rem;
+        max-width: 60%;
+    }
+}
+
+figure{
+    border-bottom: 4px solid var(--green);
+    padding-bottom: .5rem;  
+    margin-top: .25rem;
+    figcaption{
+        font-size: .75rem;
+    }
+    &.right{
+        margin-left: 1.5rem;
+        margin-right: 0;
+    }
+    &.left{
+        margin-right: 1.5rem;
+        margin-left: 0;
+    }
+}
