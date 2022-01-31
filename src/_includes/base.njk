@@ -28,7 +28,14 @@
     <div class="wrapper">
         <header class="pageHeader">
         <h1 class="siteTitle">{{title}}</h1>
-        {# {% include navigation.html %} #}
+            {# <nav class="mainNav">
+                {% for item in navigation %}
+                    <a href="{{ item.link }}">
+                    {{ item.name }}
+                </a>
+                {% endfor %}
+            </nav> #}
+            {% include "_navigation.njk" %}
         </header>
         <main>
             {{ content | safe }}

@@ -1,7 +1,112 @@
 ---
-title: Marteal Cycle Works
-layout: 'base.njk'
+title: Marteal Cycle Works, Custom Bicycles in Ithaca NY.
+description: Custom bicyle builder in Upstate NY with the mission to connect people to the outdoors with their dream bicycle. Marteal Cycle Works will always strive to make people feel safe and valued as a customer.
+layout: base
 ---
-<h1>new page</h1>
-<h2>workin on git?</h2>
-<p>Hi</p>
+
+<div class="hero">
+	<img
+		src="/images/civic/full-side-finished.jpg"
+		alt="the Civic on the path in the park"
+	/>
+	<h1><span>Your one true</span>custom bicycle</h1>
+</div>
+<div class="about">
+	<div class="lede">
+		<p>
+			Custom bicycles to experience joy and wonder exploring the world, wherever
+			you may go on the bicycle of your dreams.
+		</p>
+		<div class="icon--bicycle"></div>
+	</div>
+
+	<p>
+		Marteal Cycle Works (MCW) is grounded in the belief that everyone deserves
+		to experience joy, adventure, and wonder on a bike. Every cyclist, whether
+		an avid racer, an occasional tourer, or a total beginner deserves to be
+		valued and respected as a person, a cyclist and a customer.
+	</p>
+	<p>
+		MCW was founded by me, Bob Marteal, after years of cycling and shopping the
+		market looking for good customer service and a bicycle that felt right. I
+		often felt frustrated that there was no place for me in the market. In 2014
+		after hours of research, I purchased what I thought would be my
+		forever-bike. Shortly after, I began to feel it wasn’t quite right and
+		didn’t feel I had anywhere to turn.
+	</p>
+	<p><a href="/about.html">That got me thinking about custom bicycles...</a></p>
+</div>
+
+<div class="block">
+	<h2 class="block__title">Bicycles I built</h2>
+
+ {%- for build in collections.build -%}
+    <div class="bikeIntroduction">
+		<h2 class="bikeIntroduction__title">{{ build.data.title }}</h2>
+		<div class="mini-gallery popup-gallery">
+        {# {{repatint.data.gallery}} #}
+        {%- for image in build.data.gallery -%}
+        {% if loop.index0 < 3 %}
+            <a
+				href="{{image.full}}"
+				title="{{image.imagealt}}"
+				><img
+					src="{{image.thumb}}"
+					alt="{{image.imagealt}}"
+			/></a>
+            {% endif %}
+        {%- endfor -%}
+		</div>
+		<p>
+			{{ build.data.introduction }}
+		</p>
+        <a href="{{ build.url }}" class="button centered">See {{ build.data.title }}</a>
+	</div>
+    {%- endfor -%}
+</div>
+<div class="whyCustom pt">
+	<div class="pt__words">
+		<h2>Why a Custom Bicycle?</h2>
+		<p>
+			Bicycles available in stores are designed and built for riders of average
+			height, weight, and length. For most cyclists, this leads to compromise.
+			If you have ever had a bicycle that didn't quite fit or do what you need,
+			a custom bicycle fit to your measurements and uses can be a dream come
+			true.
+		</p>
+		<p>
+			<a href="why-custom.html">Why is a custom bicycle the best for you?</a>
+		</p>
+	</div>
+	<div class="pt__photo">
+		<img
+			src="/images/fit-diagram.png"
+			alt="diagram showing custom fit measurements in relation to frame"
+			class="plain"
+		/>
+	</div>
+</div>
+
+<div class="block">
+	<h2 class="block__title">Bicycles I painted</h2>
+    {%- for repaint in collections.repaint -%}
+    <div class="bikeIntroduction">
+		<h2 class="bikeIntroduction__title">{{ repaint.data.title }}</h2>
+		<div class="mini-gallery popup-gallery">
+        {# {{repatint.data.gallery}} #}
+        {%- for image in repaint.data.gallery -%}
+            <a
+				href="{{image.full}}"
+				title="{{image.imagealt}}"
+				><img
+					src="{{image.thumb}}"
+					alt="{{image.imagealt}}"
+			/></a>
+        {%- endfor -%}
+		</div>
+		<p>
+			{{ repaint.data.introduction }}
+		</p>
+	</div>
+    {%- endfor -%}
+</div>

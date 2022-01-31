@@ -1,0 +1,35 @@
+---
+layout: base
+title: Bikes
+---
+
+<h1>Bicycles</h1>
+<p>
+	Bicycle building is a very humbling and gratifying experience. I have more int the works that I can't wait to share. I hope you enjoy them.
+</p>
+
+<ul>
+    {%- for build in collections.build -%}
+    <div class="bikeIntroduction">
+        <h1 class="title">
+            {{ build.data.title }}
+        </h1>
+        <p>
+            {{ build.data.description }}
+        </p>
+        <div class="hero">
+            <img src="{{ build.data.hero.imagepath }}" alt="{{ build.data.hero.imagealt }}" />
+            <h1>
+                <span>{{ build.data.hero.h1span}}</span>{{ build.data.hero.h1 }}
+            </h1>
+        </div>
+        <p>
+            {{build.data.introduction}}
+        </p>
+        <a href="{{build.url}}" class="button centered">
+            See {{build.data.title}}
+        </a>
+    </div>
+    {%- endfor -%}
+</ul>
+

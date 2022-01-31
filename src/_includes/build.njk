@@ -1,0 +1,73 @@
+---
+layout: 'base.njk'
+---
+<div class="hero">
+    <img src="{{ hero.imagepath }}" alt="{{ hero.imagealt }}">
+    <h1>
+        <span>{{ hero.h1span}}</span>{{ hero.h1 }}
+    </h1>
+</div>
+
+<h1 class="title">{{ title }}</h1>
+
+{{ content | safe }}
+
+<h2>Gallery</h2>
+<div class="big-gallery">
+    {% for item in gallery %}
+        <a href="{{ item.full }}" class="{{ item.imageclass }} animated" title="{{ item.imagealt }}" caption="{{ item.imagecaption }}">
+            <img src="{{ item.thumb }}" alt="{{ item.imagealt }}" >
+        </a>
+    {% endfor %}
+</div>
+
+
+<h2>Fit and geometry</h2>
+<p>
+    Four numbers establish your touchpoints around the bicycle. These measurements are the starting point for what makes a bicycle <em>custom</em>. From this starting place we can make educated decisions about the geometry of the bicycle in conjunction with the needs of the rider.
+</p>
+<div class="pt">
+    <div>
+        <h3>Custom measurements</h3>
+        <table summary="Custom fit numbers" class="data">
+            <tr>
+                <th>Span</th>
+                <th>Distance in mm</th>
+            </tr>
+            {% for item in fitNumbers %}
+                <tr>
+                    <td>{{item.title}}</td>
+                    <td>{{item.number}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <img src="/images/fit-diagram.png" alt="diagram showing custom fit measurements in relation to frame" class="plain">
+</div>
+
+<div class="pt">
+    <div>
+        <h3>
+            Frame geometry
+        </h3>
+        <table summary="Custom fit numbers" class="data">
+            <tr>
+                <th>Span</th>
+                <th>Distance in mm</th>
+            </tr>
+            {% for item in frameGeometry %}
+            <tr>
+                <td>{{item.title}}</td>
+                <td>{{item.number}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <div>
+        <img src="/images/geometry-diagram.png" alt="Diagram to show the different spans on the bicyle" class="plain">
+    </div>
+</div>
+
+
+
+

@@ -1,0 +1,7 @@
+            <nav class="mainNav">
+                {% for item in navigation %}
+                    <a href="{{ item.link }}">
+                    {{ item.name }}
+                </a>
+                {% endfor %}
+            </nav>
