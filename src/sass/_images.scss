@@ -6,32 +6,36 @@
     -shows
 */
 
-img{
-    max-width: 100%;
-    border-radius: var(--border-radius);
-    @include boxShadow();
-    &.plain{
-        box-shadow: none;
-    }
-    &.right{
-        margin-left: 1rem;
-        max-width: 60%;
-    }
+img {
+  max-width: 100%;
+  border-radius: var(--border-radius);
+  @include boxShadow();
+  &.plain {
+    box-shadow: none;
+  }
+  &.right {
+    margin-left: 1rem;
+    max-width: 60%;
+  }
 }
 
-figure{
-    border-bottom: 4px solid var(--green);
-    padding-bottom: .5rem;  
-    margin-top: .25rem;
-    figcaption{
-        font-size: .75rem;
+figure {
+  border-bottom: 4px solid var(--green);
+  padding-bottom: 0.5rem;
+  margin-top: 0.25rem;
+  figcaption {
+    font-size: 0.75rem;
+  }
+  &.right {
+    @include sm() {
+      margin-left: 1.5rem;
+      margin-right: 0;
     }
-    &.right{
-        margin-left: 1.5rem;
-        margin-right: 0;
+  }
+  &.left {
+    @include sm() {
+      margin-right: 1.5rem;
+      margin-left: 0;
     }
-    &.left{
-        margin-right: 1.5rem;
-        margin-left: 0;
-    }
+  }
 }

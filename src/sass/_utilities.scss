@@ -3,19 +3,23 @@
     Descr: Styles for all the bits and bobs that go beyond each element
 */
 
-.left{
+.left {
+  @include sm() {
     float: left;
+  }
 }
-.right{
+.right {
+  @include sm() {
     float: right;
+  }
 }
-.centered{
+.centered {
   margin-left: 50%;
-    transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
-.fortyP{
-    @include sm{
-        max-width: 40%;
-    }
+.fortyP {
+  @include sm {
+    max-width: 40%;
+  }
 }
