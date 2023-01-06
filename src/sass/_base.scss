@@ -1,12 +1,13 @@
 /* 
     Name: _base
     Descr: body and html styles
+    ....
 */
 body {
-    // background: var(--light-gray);
+  // background: var(--light-gray);
 }
 html {
-    font-family: var(--sans);
-    font-size: var(--base-font-size);
-    line-height: var(--base-line-height);
+  font-family: var(--sans);
+  font-size: var(--base-font-size);
+  line-height: var(--base-line-height);
 }
