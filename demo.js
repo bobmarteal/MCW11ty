@@ -31,15 +31,15 @@
 //     })
 //   );
 // })();
-const Image = require("@11ty/eleventy-img");
+// const Image = require("@11ty/eleventy-img");
 
-(async () => {
-  const url = "https://images.unsplash.com/photo-1608178398319-48f814d0750c";
+// (async () => {
+//   const url = "https://images.unsplash.com/photo-1608178398319-48f814d0750c";
 
-  const stats = await Image(url, {
-    formats: ["webp", "jpeg"],
-    widths: [null, 300, 600],
-    dryRun: true,
-  });
-  console.log(stats);
-})();
+//   const stats = await Image(url, {
+//     formats: ["webp", "jpeg"],
+//     widths: [null, 300, 600],
+//     dryRun: true,
+//   });
+//   console.log(stats);
+// })();
