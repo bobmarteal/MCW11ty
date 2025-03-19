@@ -6,13 +6,16 @@
 .big-gallery {
   max-width: 1400px;
   display: grid;
-  grid-template-columns: repeat(14, minmax(50px, 1fr));
-  grid-gap: 0.5rem;
-  grid-auto-rows: minmax(50px, 1fr);
-  grid-auto-flow: dense;
-  line-height: 0;
-  width: 120%;
-  margin-left: -10%;
+
+  @include md() {
+    grid-template-columns: repeat(14, minmax(50px, 1fr));
+    grid-gap: 0.5rem;
+    grid-auto-rows: minmax(50px, 1fr);
+    grid-auto-flow: dense;
+    line-height: 0;
+    width: 120%;
+    margin-left: -10%;
+  }
   a {
     object-fit: cover;
     border: 5px solid transparent;
